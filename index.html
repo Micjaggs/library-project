@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sytle.css">
+    <link rel="stylesheet" href="style.css">
     <title>Library Project</title>
 </head>
 <body>
+    <main id="app">
+        <form id="book-input">
+            <label for="title">Book Title</label>
+            <input type="text" 
+                id="title"
+                name="book-title"
+                required
+                placeholder="Title" />
+
+            <label for="author">Author</label>
+            <input type="text" 
+                name="book-author" 
+                id="author"
+                required
+                placeholder="Author" />
+
+            <label for="pages">Pages</label>
+            <input type="number" 
+                name="book-pages" 
+                id="pages"
+                required
+                placeholder="Pages" />
+
+            <label for="read">Read</label>
+            <input type="checkbox" 
+                name="book-read" 
+                id="read" />
+
+            <button type="submit" id="submit">Book Submit</button>
+        </form>
+        <div id="library-list">
+
+        </div>
+    </main>
     
 <script src="script.js"></script>
 </body>
