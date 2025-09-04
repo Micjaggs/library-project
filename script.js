@@ -96,3 +96,28 @@ form.addEventListener('submit', (e) => {
     bookTitle.focus();
 })
 
+bookList.addEventListener('click', (e) => {
+    const isToggle = e.target.classList.contains('toggle-btn');
+    const isRemove = e.target.classList.contains('rmv-btn');
+
+    if (!isToggle && !isRemove) return; //Guard clause to prevent running code on random clicks
+
+    const card = e.target.closest('.book-card');
+    if (!card) return;
+    const id = card.dataset.id;
+
+    const book = myLibrary.find(b => b.id === id);
+    if (!book) return;
+
+
+// This is where if Toggle is clicked, flip the boolean, else (rmv-btn) remove the book
+
+    if (isToggle) {
+        book.isRead = !book.isRead;
+    } else {
+        const idx = myLibrary.findIndex(b => b.id === id);
+        if (idx !== -1) myLibrary.splice(idx, 1);
+    }
+
+    renderLibrary()
+})
