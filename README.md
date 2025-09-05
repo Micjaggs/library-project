@@ -18,3 +18,6 @@ A simple JavaScript app for managing a personal book collection, built as part o
 - Edit existing book details  
 - Add search/filter functionality  
 - Refactor to ES6 classes  
+
+## Try It Out!
+- https://micjaggs.github.io/library-project/
