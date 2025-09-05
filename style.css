@@ -6,6 +6,7 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 3. Enable keyword animations */
@@ -53,11 +54,59 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+button {
+  width: 8rem;
+  height: 1.6rem;
+}
+
+button.rmv-btn {
+  width: 6rem;
+  height: 1.3rem;
+  font-size: small;
+  margin: 2px;
+}
+
+button.toggle-btn {
+  width: 6rem;
+  height: 1.3rem;
+  font-size: small;
+  margin: 2px;
+}
+
+
+/* Book form styling */
+
 #book-input{
   display: grid;
   grid-template-columns: 5rem 1fr;
   align-items: center;
   gap: 0.75rem;
-  max-width: 640px;
+  max-width: 300px;
   margin: 2rem auto;
 }
+
+#book-input input[type="checkbox"] {
+  justify-self: start;
+}
+
+#book-input button {
+  grid-column: 2;
+  justify-self: start;
+}
+
+/* book card styling */
+
+#library-list {
+  display: grid;
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+  border: solid;
+}
+
